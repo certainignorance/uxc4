@@ -2,29 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Sample html</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Company Name</title>
+  
 </head>
 <body>
-  <a id="top" name="top"></a>
-  <h1>Hello World!</h1>
-  <hr />
-  <h2>Second header</h2>
-  <h3>Third Header</h3>
-  <h4>Fourth Header</h4>
-  <h5>Fifth Header</h5>
-  <h6>Six<sup>th</sup> Header</h6>
-  <p>This is paragraph text. <b>Bold text.</b> <br />Break <strong>Strong Text.</strong></p>
-  <p><i>Italics</i> <em>Emphasis</em></p>
-  <p>Internal Image: <br /><img src="assets/img/Computer Web-portfolio-Jeremy.png" alt=""></p>
-  <p><a href="#top">Go to Top</a></p>
-  <p>My name is <b>Jeremy</b></p>
-  <!--
-    this is a box
-  -->
-  <div>
-    <p>This is a div.</p>
-  </div>
+  <header>
+    <div id="headerDiv">
+      <div id="logo">
+        <h1><a href="#">Company Name</a></h1>
+      </div>
+      <nav>
+        <div id="navBar">
+          <menu class="navMenu">
+            <li><h2><a href="#">Features</a></h2></li>
+            <li><h2><a href="#">Enterprise</a></h2></li>
+            <li><h2><a href="#">Support</a></h2></li>
+            <li><h2><a href="#">Pricing</a></h2></li>
+            <li class="signUp"><h2><a href="#">Sign up</a></h2></li>
+          </menu>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div id="hero">
+      <h1>Pricing</h1>
+      <h2>Quickly build an effective pricing table for you potential customers with this Bootstrap example. It's build with default Bootstrap components and utilities with little customization.</h2>
+    </div>
+    <article id="prices">
+      <section class="priceOption">
+        <h1>Free</h1>
+        <h2>$0 / mo</h2>
+        <p>10 users included <br>
+        2 GB of storage <br>
+        Email Support <br>
+        Help center access
+        </p>
+        <h3><a href="#">Sign up for free</a></h3>
+      </section>
+      <section class="priceOption">
+        <h1>Pro</h1>
+        <h2>$15 / mo</h2>
+        <p>20 users included <br>
+        10 GB of storage <br>
+        Email Support <br>
+        Help center access
+        </p>
+        <h3><a href="#">Get started</a></h3>
+      </section>
+      <section class="priceOption">
+        <h1>Enterprise</h1>
+        <h2>$29 / mo</h2>
+        <p>30 users included <br>
+        15 GB of storage <br>
+        Email Support <br>
+        Help center access
+        </p>
+        <h3><a href="#">Contact us</a></h3>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <div id="footRow1">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/1193px-Boostrap_logo.svg.png" alt="Bootstrap logo" height="20px" width="20px" />
+      <br />
+      <small>&copy; 2017-2019</small>
+    </div>
+    <div id="footRow2">
+      <h2><a href="#">Features</a></h2>
+      <menu>
+        <li><h3><a href="#">Cool stuff</a></h3></li>
+        <li><h3><a href="#">Random feature</a></h3></li>
+        <li><h3><a href="#">Team feature</a></h3></li>
+        <li><h3><a href="#">Stuff for developers</a></h3></li>
+        <li><h3><a href="#">Another one</a></h3></li>
+        <li><h3><a href="#">Last time</a></h3></li>
+      </menu>
+    </div>
+    <div id="footRow3">
+      <h2><a href="#">Resources</a></h2>
+      <menu>
+        <li><h3><a href="#">Resource</a></h3></li>
+        <li><h3><a href="#">Resource name</a></h3></li>
+        <li><h3><a href="#">Another resource</a></h3></li>
+        <li><h3><a href="#">Final resource</a></h3></li>
+      </menu>
+    </div>
+    <div id="footRow4">
+      <h2><a href="#">About</a></h2>
+      <menu>
+        <li><h3><a href="#">Team</a></h3></li>
+        <li><h3><a href="#">Locations</a></h3></li>
+        <li><h3><a href="#">Privacy</a></h3></li>
+        <li><h3><a href="#">Terms</a></h3></li>
+      </menu>
+    </div>
+  </footer>
 </body>
 </html>
