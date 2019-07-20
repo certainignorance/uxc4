@@ -1,30 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Jeremy Platt" />
   <title>Company Name</title>
-  
+  <style>
+    /* document */
+    html, body {
+      width: 100%;
+      margin:0em;
+      padding:0em;
+      font-family: helvetica, arial, sans-serif;
+      font-weight: 100;
+    }
+    h1 {
+      font-size: 1.17em;
+      font-weight: 200;
+    }
+    h2 {
+      font-size: 1.5em;
+      font-weight: 100;
+    }
+    h3 {
+      font-size: 1.17em;
+      font-weight: 100;
+    }
+    p {
+      font-size: 1em;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color: orange;
+    }
+
+    /* html elements */
+    /* header elements */
+    header {
+      display: inline-block;
+      width: 100%;
+      padding: inherit;
+      margin-top: 1em;
+      height: auto;
+    }
+    header h1, header h2, header menu, header nav, header li {
+      display: inline-block;
+      padding: inherit;
+      margin:0em;
+    }
+    header #logo {
+      display: inline;
+      float: left;
+    }
+    header nav {
+      float:right;
+      text-align: right;
+      height: 100%;
+    }
+    header h1 {
+      padding-left: 1em;
+      padding-right: 1em;
+      font-size: 1.2em;
+      margin-top:-0.2em;
+    }
+    header h2 {
+      font-size: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    .signUp h2{
+      display: inline;
+      background-color: white;
+      border:0.1em black solid;
+      border-radius: 0.2em;
+      padding: 0.3em;
+      margin: 1em;
+    }
+    .signUp h2:hover{
+      background-color: blue;
+      color: white;
+    }
+
+    /* main elements */
+    main {
+      margin-top: 4em;
+      clear: both;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+    #hero h1{
+      font-size: 2em;
+    }
+    #hero h2 {
+      font-size: 1em;
+    }
+
+    article {
+      margin-top: 2em;
+      width: 100%;
+      display: inline-block;
+    }
+    section {
+      display: inline-block;
+      text-align: center;
+      width: 32%;
+    }
+    section div {
+      display: inline-block;
+      text-align: left;
+    }
+
+    section a {
+      display: inline-block;
+      margin-top: 1em;
+      text-align: center;
+      width: 100%;
+    }
+
+    section h2 {
+      font-weight: 400;
+    }
+
+    section h3 {
+      display: inline;
+      background-color: orange;
+      border:0.1em black solid;
+      border-radius: 0.5em;
+      padding: 0.5em;
+      color: white;
+    }
+
+    section h3:hover{
+      background-color: blue;
+    }
+
+    /* footer elements */
+    footer {
+      margin-top: 6em;
+      clear: both;
+      display: block;
+      width: 100%;
+      vertical-align: top;
+    }
+    footer div {
+      display: inline-block;
+      vertical-align: top;
+      width: 24%;
+      text-align: center;
+    }
+    footer div div {
+      width:auto;
+      display: inline-block;
+      text-align: left;
+    }
+    footer menu {
+      padding: 0.5em;
+      padding-top: 0em;
+    }
+    footer li {
+      list-style-type: none;
+      padding-left: 0em;
+      padding-left: 0em;
+    }
+    footer h2 {
+      font-size: 1em;
+      margin-top: 0em;
+    }
+    footer h3 {
+      font-size: 0.75em;
+      margin: 0.4em;
+    }
+
+    footer img {
+      float: left;
+      margin:0em;
+      padding:0em;
+    }
+    footer small {
+      float: left;
+      margin-left: 1em;
+    }
+    footer #footRow1 br {
+      display: none;
+    }
+
+  </style>
 </head>
 <body>
   <header>
-    <div id="headerDiv">
       <div id="logo">
-        <h1><a href="#">Company Name</a></h1>
+        <a href="#"><h1>Company Name</h1></a>
       </div>
       <nav>
-        <div id="navBar">
           <menu class="navMenu">
-            <li><h2><a href="#">Features</a></h2></li>
-            <li><h2><a href="#">Enterprise</a></h2></li>
-            <li><h2><a href="#">Support</a></h2></li>
-            <li><h2><a href="#">Pricing</a></h2></li>
-            <li class="signUp"><h2><a href="#">Sign up</a></h2></li>
+            <li><a href="#"><h2>Features</h2></a></li>
+            <li><a href="#"><h2>Enterprise</h2></a></li>
+            <li><a href="#"><h2>Support</h2></a></li>
+            <li><a href="#"><h2>Pricing</h2></a></li>
+            <li class="signUp"><a href="#"><h2>Sign up</h2></a></li>
           </menu>
-        </div>
       </nav>
-    </div>
   </header>
   <main>
     <div id="hero">
@@ -33,6 +212,7 @@
     </div>
     <article id="prices">
       <section class="priceOption">
+        <div>
         <h1>Free</h1>
         <h2>$0 / mo</h2>
         <p>10 users included <br>
@@ -40,9 +220,11 @@
         Email Support <br>
         Help center access
         </p>
-        <h3><a href="#">Sign up for free</a></h3>
+        <a href="#"><h3>Sign up for free</h3></a>
+      </div>
       </section>
       <section class="priceOption">
+        <div>
         <h1>Pro</h1>
         <h2>$15 / mo</h2>
         <p>20 users included <br>
@@ -50,54 +232,65 @@
         Email Support <br>
         Help center access
         </p>
-        <h3><a href="#">Get started</a></h3>
+        <a href="#"><h3>Get started</h3></a>
+      </div>
       </section>
       <section class="priceOption">
-        <h1>Enterprise</h1>
-        <h2>$29 / mo</h2>
-        <p>30 users included <br>
-        15 GB of storage <br>
-        Email Support <br>
-        Help center access
-        </p>
-        <h3><a href="#">Contact us</a></h3>
+        <div>
+          <h1>Enterprise</h1>
+          <h2>$29 / mo</h2>
+          <p>30 users included <br>
+          15 GB of storage <br>
+          Email Support <br>
+          Help center access
+          </p>
+          <a href="#"><h3>Contact us</h3></a>
+        </div>
       </section>
     </article>
   </main>
   <footer>
     <div id="footRow1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/1193px-Boostrap_logo.svg.png" alt="Bootstrap logo" height="20px" width="20px" />
-      <br />
-      <small>&copy; 2017-2019</small>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/1193px-Boostrap_logo.svg.png" alt="Bootstrap logo" height="20px" width="20px" />
+        <br />
+        <small>&copy; 2017-2019</small>
+      </div>
     </div>
     <div id="footRow2">
-      <h2><a href="#">Features</a></h2>
-      <menu>
-        <li><h3><a href="#">Cool stuff</a></h3></li>
-        <li><h3><a href="#">Random feature</a></h3></li>
-        <li><h3><a href="#">Team feature</a></h3></li>
-        <li><h3><a href="#">Stuff for developers</a></h3></li>
-        <li><h3><a href="#">Another one</a></h3></li>
-        <li><h3><a href="#">Last time</a></h3></li>
-      </menu>
+      <div>
+      <a href="#"><h2>Features</h2></a>
+        <menu>
+          <li><a href="#"><h3>Cool stuff</h3></a></li>
+          <li><a href="#"><h3>Random feature</h3></a></li>
+          <li><a href="#"><h3>Team feature</h3></a></li>
+          <li><a href="#"><h3>Stuff for developers</h3></a></li>
+          <li><a href="#"><h3>Another one</h3></a></li>
+          <li><a href="#"><h3>Last time</h3></a></li>
+        </menu>
+      </div>
     </div>
     <div id="footRow3">
-      <h2><a href="#">Resources</a></h2>
-      <menu>
-        <li><h3><a href="#">Resource</a></h3></li>
-        <li><h3><a href="#">Resource name</a></h3></li>
-        <li><h3><a href="#">Another resource</a></h3></li>
-        <li><h3><a href="#">Final resource</a></h3></li>
-      </menu>
+      <div>
+        <a href="#"><h2>Resources</h2></a>
+        <menu>
+          <li><a href="#"><h3>Resource</h3></a></li>
+          <li><a href="#"><h3>Resource name</h3></a></li>
+          <li><a href="#"><h3>Another resource</h3></a></li>
+          <li><a href="#"><h3>Final resource</h3></a></li>
+        </menu>
+      </div>
     </div>
     <div id="footRow4">
-      <h2><a href="#">About</a></h2>
-      <menu>
-        <li><h3><a href="#">Team</a></h3></li>
-        <li><h3><a href="#">Locations</a></h3></li>
-        <li><h3><a href="#">Privacy</a></h3></li>
-        <li><h3><a href="#">Terms</a></h3></li>
-      </menu>
+      <div>
+        <a href="#"><h2>About</h2></a>
+        <menu>
+          <li><a href="#"><h3>Team</h3></a></li>
+          <li><a href="#"><h3>Locations</h3></a></li>
+          <li><a href="#"><h3>Privacy</h3></a></li>
+          <li><a href="#"><h3>Terms</h3></a></li>
+        </menu>
+      </div>
     </div>
   </footer>
 </body>
