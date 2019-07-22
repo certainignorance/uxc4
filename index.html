@@ -4,51 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="author" content="Jeremy Platt" />
-  <title>Company Name</title>
-  <style>
-    /* document */
+
+  <title>Jeremy Platt's UX Product Design Portfolio</title>
+
+  <meta name="canonical" href="https://www.jeremyplatt.me" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="UX Product Design Portfolio for Jeremy Platt" />
+
+  <meta property="og:type" content="WebSite" />
+  <meta property="og:title" content="Jeremy Platt UX Product Designer Portfolio" />
+  <meta property="og:description" content="UX Product Design Portfolio for Jeremy Platt" />
+  <meta property="og:image" content="LINK TO THE IMAGE FILE" />
+  <meta property="og:url" content="http://jeremyplatt.me" />
+  <meta property="og:site_name" content="Jeremy Platt UX Product Designer Portfolio" />
+
+  <meta name="twitter:title" content="Jeremy Platt UX Product Designer Portfolio" />
+  <meta name="twitter:description" content="UX Product Design Portfolio for Jeremy Platt" />
+  <meta name="twitter:image" content="LINK TO IMAGE" />
+  <meta name="twitter:site" content="@USERNAME" />
+  <meta name="twitter:creator" content="@USERNAME" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "http://jeremyplatt.me",
+      "name": "Jeremy Platt UX Product Designer Portfolio"
+    }
+  </script>
+
+  <script src="https://kit.fontawesome.com/98631fb0ca.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap" rel="stylesheet">
+
+  <style media="screen">
+    /* document elements */
     html, body {
       width: 100%;
-      margin:0em;
-      padding:0em;
-      font-family: helvetica, arial, sans-serif;
-      font-weight: 100;
+      height: 100%;
+      margin: 0em;
+      padding: 0em;
+      font-family: 'Raleway', helvetica, arial, sans-serif;
+      font-weight: 400;
+      color: #000000;
     }
     h1 {
-      font-size: 1.17em;
+      font-size: 1.67em;
       font-weight: 200;
     }
     h2 {
       font-size: 1.5em;
       font-weight: 100;
+      margin-top: 2em;
+      margin-left: 1em;
     }
     h3 {
       font-size: 1.17em;
       font-weight: 100;
+      margin-left: 1em;
     }
     p {
+      margin-left: 1em;
       font-size: 1em;
     }
     a {
       text-decoration: none;
+      color: red;
     }
     a:hover {
-      color: orange;
+      color: blue;
+    }
+    .hideSpan span, .hideText{
+      display: none;
+    }
+    .clear {
+      clear: both;
     }
 
-    /* html elements */
+    /* fontawesome elements */
+    .fa-envelope {
+      display: none;
+    }
+
     /* header elements */
     header {
-      display: inline-block;
+      position: fixed;
+      display: block;
       width: 100%;
-      padding: inherit;
-      margin-top: 1em;
+      padding-top: 1em;
+      margin-top: 0em;
       height: auto;
+      border-bottom: solid 4px #c97d60;
+      background-color: #f1efed;
+      z-index: 100;
     }
     header h1, header h2, header menu, header nav, header li {
       display: inline-block;
-      padding: inherit;
+      padding: 0em;
       margin:0em;
     }
     header #logo {
@@ -64,233 +115,143 @@
       padding-left: 1em;
       padding-right: 1em;
       font-size: 1.2em;
-      margin-top:-0.2em;
+      margin-top: -0.2em;
+      font-weight: 900;
+      color: #c97d60;
     }
     header h2 {
       font-size: 1em;
       padding-left: 1em;
       padding-right: 1em;
-    }
-    .signUp h2{
-      display: inline;
-      background-color: white;
-      border:0.1em black solid;
-      border-radius: 0.2em;
-      padding: 0.3em;
-      margin: 1em;
-    }
-    .signUp h2:hover{
-      background-color: blue;
-      color: white;
+      font-weight: 900;
+      color: #c97d60;
     }
 
     /* main elements */
     main {
-      margin-top: 4em;
-      clear: both;
-      width: 100%;
       display: block;
-      text-align: center;
+      width: 100%;
+      padding-top: 2.2em;
     }
-    #hero h1{
-      font-size: 2em;
+    .afterHero {
+      margin-top: 80vh;
     }
-    #hero h2 {
-      font-size: 1em;
+    .caseStudies, .imgSection {
+      padding-top: 2em;
+      border-top: solid 4px #c97d60;
+      border-bottom: solid 4px #c97d60;
+      background-image: -webkit-linear-gradient(9deg, #f1efed, #ddd5d0);
+      background-image: -o-linear-gradient(9deg, #f1efed, #ddd5d0);
+      background-image: linear-gradient(99deg, #f1efed, #ddd5d0);
+      transform: skewY(-3deg);
+      transform-origin: top right;
+      margin-bottom: 25vh;
+    }
+    .caseStudies > *, .imgSection > * {
+      transform: skewY(3deg);
+      transform-origin: top right;
     }
 
-    article {
-      margin-top: 2em;
-      width: 100%;
+    .caseStudy {
       display: inline-block;
-    }
-    section {
-      display: inline-block;
-      text-align: center;
       width: 32%;
-    }
-    section div {
-      display: inline-block;
-      text-align: left;
-    }
-
-    section a {
-      display: inline-block;
-      margin-top: 1em;
-      text-align: center;
-      width: 100%;
-    }
-
-    section h2 {
-      font-weight: 400;
-    }
-
-    section h3 {
-      display: inline;
-      background-color: orange;
-      border:0.1em black solid;
-      border-radius: 0.5em;
-      padding: 0.5em;
-      color: white;
-    }
-
-    section h3:hover{
-      background-color: blue;
     }
 
     /* footer elements */
     footer {
-      margin-top: 6em;
-      clear: both;
-      display: block;
-      width: 100%;
-      vertical-align: top;
+      border-top: solid 4px #c97d60;
+      background-image: -webkit-linear-gradient(9deg, #f1efed, #ddd5d0);
+      background-image: -o-linear-gradient(9deg, #f1efed, #ddd5d0);
+      background-image: linear-gradient(99deg, #f1efed, #ddd5d0);
+      transform: skewY(-3deg);
+      transform-origin: top right;
+      padding-bottom: 4em;
+      margin-bottom: -3em;
+      padding-top: 1em;
+      overflow-y: hidden;
     }
-    footer div {
+    footer > * {
+      transform: skewY(3deg);
+      transform-origin: top right;
+    }
+    footer p {
       display: inline-block;
-      vertical-align: top;
-      width: 24%;
-      text-align: center;
-    }
-    footer div div {
-      width:auto;
-      display: inline-block;
-      text-align: left;
-    }
-    footer menu {
-      padding: 0.5em;
-      padding-top: 0em;
-    }
-    footer li {
-      list-style-type: none;
-      padding-left: 0em;
-      padding-left: 0em;
-    }
-    footer h2 {
-      font-size: 1em;
-      margin-top: 0em;
-    }
-    footer h3 {
-      font-size: 0.75em;
-      margin: 0.4em;
     }
 
-    footer img {
-      float: left;
-      margin:0em;
-      padding:0em;
-    }
-    footer small {
-      float: left;
-      margin-left: 1em;
-    }
-    footer #footRow1 br {
-      display: none;
+    .mediaIcons {
+      float: right;
+      padding: 1em;
     }
 
   </style>
 </head>
 <body>
   <header>
-      <div id="logo">
-        <a href="#"><h1>Company Name</h1></a>
-      </div>
-      <nav>
-          <menu class="navMenu">
-            <li><a href="#"><h2>Features</h2></a></li>
-            <li><a href="#"><h2>Enterprise</h2></a></li>
-            <li><a href="#"><h2>Support</h2></a></li>
-            <li><a href="#"><h2>Pricing</h2></a></li>
-            <li class="signUp"><a href="#"><h2>Sign up</h2></a></li>
-          </menu>
-      </nav>
+    <div id="logo">
+      <a href="#"><h1>Jeremy Platt</h1></a>
+    </div>
+    <nav class="navMain">
+        <menu class="navMenu">
+          <li><a href="#"><h2>Process</h2></a></li>
+          <li><a href="#"><h2>Portfolio</h2></a></li>
+          <li><a href="#"><h2>Blog</h2></a></li>
+          <li><a href="#"><h2>About</h2></a></li>
+          <li class="menuContact"><a href="#"><i class="far fa-envelope" aria-hidden="true"></i><h2>Contact</h2></a></li>
+          <li class="menuLock"><a href="#"><h2><i class="fas fa-lock" aria-hidden="true"></i><span class="hideText">Open Password Locked Content</span></h2></a></li>
+        </menu>
+    </nav>
   </header>
   <main>
-    <div id="hero">
-      <h1>Pricing</h1>
-      <h2>Quickly build an effective pricing table for you potential customers with this Bootstrap example. It's build with default Bootstrap components and utilities with little customization.</h2>
+    <div class="heroDiv">
+      <h1 class="hideText">Jeremy Platt's UX Product Design Portfolio</h1>
+      <h2 class="hideText">
+        Website description
+      </h2>
     </div>
-    <article id="prices">
-      <section class="priceOption">
-        <div>
-        <h1>Free</h1>
-        <h2>$0 / mo</h2>
-        <p>10 users included <br>
-        2 GB of storage <br>
-        Email Support <br>
-        Help center access
-        </p>
-        <a href="#"><h3>Sign up for free</h3></a>
+    <section class="caseStudies afterHero">
+      <div class="mediaIcons">
+        <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i><span class="hideText">Dribble</span></a>
+        <a href="#"><i class="fab fa-behance-square" aria-hidden="true"></i><span class="hideText">Behance</span></a>
+        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i><span class="hideText">Instagram</span></a>
+        <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="hideText">LinkedIn</span></a>
       </div>
-      </section>
-      <section class="priceOption">
-        <div>
-        <h1>Pro</h1>
-        <h2>$15 / mo</h2>
-        <p>20 users included <br>
-        10 GB of storage <br>
-        Email Support <br>
-        Help center access
-        </p>
-        <a href="#"><h3>Get started</h3></a>
-      </div>
-      </section>
-      <section class="priceOption">
-        <div>
-          <h1>Enterprise</h1>
-          <h2>$29 / mo</h2>
-          <p>30 users included <br>
-          15 GB of storage <br>
-          Email Support <br>
-          Help center access
-          </p>
-          <a href="#"><h3>Contact us</h3></a>
-        </div>
-      </section>
-    </article>
+      <h2>Case Studies</h2>
+      <article class="caseStudy clear">
+        <a href="#"><img src="" alt="" /></a>
+        <h3>Doula Nation</h3>
+        <i class="fas fa-project-diagram" aria-hidden="true"></i><span class="hideText">Information Architect</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" class="linkButton">More</a>
+      </article>
+      <article class="caseStudy">
+        <a href="#"><img src="" alt="" /></a>
+        <h3>Make A Scene</h3>
+        <i class="fas fa-user-cog" aria-hidden="true"></i><span class="hideText">UX Design Lead</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" class="linkButton">More</a>
+      </article>
+      <article class="caseStudy">
+        <a href="#"><img src="" alt="" /></a>
+        <h3>Flexible Workplace</h3>
+        <i class="fas fa-pencil-ruler" aria-hidden="true"></i><span class="hideText">UX Designer</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" class="linkButton">More</a>
+      </article>
+    </section>
+    <section class="imgSection">
+      <h2>UX / Product Designer</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
   </main>
   <footer>
-    <div id="footRow1">
-      <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/1193px-Boostrap_logo.svg.png" alt="Bootstrap logo" height="20px" width="20px" />
-        <br />
-        <small>&copy; 2017-2019</small>
-      </div>
-    </div>
-    <div id="footRow2">
-      <div>
-      <a href="#"><h2>Features</h2></a>
-        <menu>
-          <li><a href="#"><h3>Cool stuff</h3></a></li>
-          <li><a href="#"><h3>Random feature</h3></a></li>
-          <li><a href="#"><h3>Team feature</h3></a></li>
-          <li><a href="#"><h3>Stuff for developers</h3></a></li>
-          <li><a href="#"><h3>Another one</h3></a></li>
-          <li><a href="#"><h3>Last time</h3></a></li>
-        </menu>
-      </div>
-    </div>
-    <div id="footRow3">
-      <div>
-        <a href="#"><h2>Resources</h2></a>
-        <menu>
-          <li><a href="#"><h3>Resource</h3></a></li>
-          <li><a href="#"><h3>Resource name</h3></a></li>
-          <li><a href="#"><h3>Another resource</h3></a></li>
-          <li><a href="#"><h3>Final resource</h3></a></li>
-        </menu>
-      </div>
-    </div>
-    <div id="footRow4">
-      <div>
-        <a href="#"><h2>About</h2></a>
-        <menu>
-          <li><a href="#"><h3>Team</h3></a></li>
-          <li><a href="#"><h3>Locations</h3></a></li>
-          <li><a href="#"><h3>Privacy</h3></a></li>
-          <li><a href="#"><h3>Terms</h3></a></li>
-        </menu>
-      </div>
+    <p>Jeremy Platt &copy; 2019</p>
+    <div class="mediaIcons">
+      <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i><span class="hideText">Dribble</span></a>
+      <a href="#"><i class="fab fa-behance-square" aria-hidden="true"></i><span class="hideText">Behance</span></a>
+      <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i><span class="hideText">Instagram</span></a>
+      <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="hideText">LinkedIn</span></a>
     </div>
   </footer>
 </body>
