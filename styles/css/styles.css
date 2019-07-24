@@ -34,6 +34,14 @@ a {
 a:hover {
   color: blue;
 }
+.linkButton {
+  display: inline-block;
+  border-radius: 20px;
+  background-image: -webkit-linear-gradient(66deg, #c97d60, #b00020);
+  background-image: -o-linear-gradient(66deg, #c97d60, #b00020);
+  background-image: linear-gradient(156deg, #c97d60, #b00020);
+}
+
 .hideSpan span, .hideText{
   display: none;
 }
@@ -141,7 +149,7 @@ main {
   -moz-clip-path: polygon(0 6vh, 100% 0, 100% calc(100% - 6vh), 0 100%);
   clip-path: polygon(0 6vh, 100% 0, 100% calc(100% - 6vh), 0 100%);
   padding-top: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
   margin-bottom: 25vh;
 }
 
@@ -165,6 +173,13 @@ main {
 .caseStudy {
   display: inline-block;
   width: 32%;
+}
+.caseStudy h3 {
+  display: inline;
+}
+.caseStudy .fas {
+  float:right;
+  display: inline-block;
 }
 
 /* footer elements */
@@ -207,7 +222,4 @@ footer p {
   position: relative;
   padding-right: 1em;
   font-size: 2em;
-}
-.mediaIcons a {
-  color: #c97d60;
 }
