@@ -1,3 +1,7 @@
+/* import elements */
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css") screen;
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap") screen;
+
 /* document elements */
 html, body {
   width: 100%;
@@ -6,11 +10,14 @@ html, body {
   padding: 0em;
   font-family: 'Raleway', helvetica, arial, sans-serif;
   font-weight: 400;
+  font-size: calc(12px + 0.5vw);
   color: #324477;
 }
 article, aside, footer, header, main, nav, section {
   display: block;
 }
+
+/* Text Elements */
 h1 {
   font-size: 1.67em;
   font-weight: 600;
@@ -18,7 +25,6 @@ h1 {
 h2 {
   font-size: 1.5em;
   font-weight: 400;
-  margin-top: 2em;
 }
 h3 {
   font-size: 1.17em;
@@ -27,6 +33,8 @@ h3 {
 p {
   font-size: 1em;
 }
+
+/* Link Styling */
 a {
   text-decoration: none;
   color: #B00020;
@@ -34,6 +42,19 @@ a {
 a:hover {
   color: #c97d60;
 }
+
+/* Buttons */
+.circleback {
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  background-color: #D79F8B;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0.66em 0.8em;
+  margin: 0.5em;
+  float:left;
+}
+
 .linkButton {
   display: inline-block;
   border-radius: 20px;
@@ -43,21 +64,20 @@ a:hover {
   color: #FFFFFF;
   text-transform: lowercase;
   font-size: 0.8em;
-  padding: 0.3em;
+  padding: 0.4em;
   padding-left: 1em;
   padding-right: 1em;
 }
-
 .linkButton:after {
   content: ' ->';
 }
-
 .linkButton:hover {
   color: #FFFFFF;
   background-color: #B00020;
   background-image: none;
 }
 
+/* css fixes */
 .hideSpan span, .hideText{
   display: none;
 }
@@ -77,11 +97,17 @@ a .fab, a .fas, a .far {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 a:hover .fab, a:hover .fas, a:hover .far {
   background-image: none;
   -webkit-text-fill-color: #B00020;
   color: #B00020;
+}
+
+.pageHead .fas, .pageHead .far {
+  display: none;
+}
+.pageHead .fa-lock {
+  display: inline;
 }
 
 /* header elements */
@@ -101,6 +127,9 @@ a:hover .fab, a:hover .fas, a:hover .far {
   padding: 0em;
   margin:0em;
 }
+.pageHead .mobileMail{
+  display: none;
+}
 .pageHead #logo {
   display: inline;
   float: left;
@@ -110,6 +139,24 @@ a:hover .fab, a:hover .fas, a:hover .far {
   text-align: right;
   height: 100%;
 }
+
+.navMain .navProfile {
+  display: none;
+  padding-bottom: 1em;
+}
+
+.navMain input {
+  display: none;
+}
+.navMain span:nth-child(1), .navMain span:nth-child(2), .navMain span:nth-child(3)
+{
+  display: none;
+}
+
+li.menuMain {
+  display: none;
+}
+
 .pageHead h1 {
   margin-left: 1em;
   margin-right: 1em;
@@ -142,18 +189,25 @@ a:hover .fab, a:hover .fas, a:hover .far {
   -webkit-background-clip: text;
   -webkit-text-fill-color: #B00020;
   color: #B00020;
-  border-bottom: solid 0.2em #B00020;
+  /* border-bottom: solid 0.2em #B00020; */
 }
 .pageHead a {
   height: 100%;
   display: inline-block;
 }
-
 .pageHead a:hover {
-  background-color: #DDD5D0;
+  background: #f1efed; /* Old browsers */
+  background: -moz-linear-gradient(top, #f1efed 0%, #ddd5d0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f1efed 0%,#ddd5d0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f1efed 0%,#ddd5d0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1efed', endColorstr='#ddd5d0',GradientType=0 );
 }
 .currentSection {
-  background-color: #DDD5D0;
+  background: #f1efed; /* Old browsers */
+  background: -moz-linear-gradient(top, #f1efed 0%, #ddd5d0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f1efed 0%,#ddd5d0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f1efed 0%,#ddd5d0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1efed', endColorstr='#ddd5d0',GradientType=0 );
 }
 .currentSection h1, .currentSection h2, .currentSection h3 {
   /* border-bottom: solid 0.2em #c97d60; */
@@ -165,8 +219,14 @@ main {
   width: 100%;
   padding-top: 2.2em;
 }
+
+.heroSection {
+  margin-top: 60vh;
+  padding-left: 15vw;
+  text-shadow: 0em 0em 1em #f1efed;
+}
 .afterHero {
-  margin-top: 70vh;
+  margin-top: 10vh;
 }
 
 .caseStudies, .imgSection {
@@ -182,7 +242,6 @@ main {
   padding-bottom: 4em;
   margin-bottom: 25vh;
 }
-
 .caseStudies:after, .imgSection:after {
   display: block;
   background-image: -webkit-linear-gradient(9deg, #f1efed, #ddd5d0);
@@ -202,7 +261,6 @@ main {
 .caseStudies {
   text-align: center;
 }
-
 .caseStudies h2 {
   margin-left: 1em;
   text-align: left;
@@ -224,6 +282,7 @@ main {
 .imgSection .textContent {
   padding-left: 1em;
   padding-right: 1em;
+  padding-top: 2em;
   width:50%;
 }
 
@@ -264,7 +323,6 @@ main {
   padding-top: 3em;
   padding-bottom: 2em;
 }
-
 .pageFoot:after {
   display: block;
   background-image: -webkit-linear-gradient(9deg, #f1efed, #ddd5d0);
@@ -304,7 +362,9 @@ main {
 
   width: 100%;
   height: 100%;
-
+  /* background-color: #f1efed; */
+  opacity: 0.5;
+  filter: alpha(opacity=50);
   overflow: hidden;
 
   .screen {
@@ -324,4 +384,157 @@ main {
       opacity: 1;
     }
   }
+}
+
+@media only screen and (orientation: portrait) {
+  .pageHead {
+    text-align: center;
+  }
+  .pageHead .mobileOpen, .pageHead .mobileMail, .pageHead .menuMain{
+    display: inline-block;
+  }
+  .pageHead .mobileMail{
+    float: right;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    font-size: 1.5em;
+  }
+  .pageHead .navMain {
+    position:fixed;
+    height: 100vh;
+    width: auto;
+    top: 0;
+    left: 0;
+    float: none;
+    text-align: left;
+    background-color: #f1efed;
+  }
+  .navMain .navProfile {
+    display: block;
+    background-color: #DDD5D0;
+  }
+
+  .pageHead li {
+    display: block;
+    padding-left: 2em;
+  }
+  .pageHead .fas, .pageHead .far {
+    display: inline;
+  }
+  .pageHead .fa-lock {
+    display: none;
+  }
+  .pageHead #logo {
+    float: none;
+  }
+  .pageHead .mobileMail h2{
+    display: none;
+  }
+  .navProfile a .fab, .navProfile a .fas, .navProfile a .far {
+    color: white;
+    background-image: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white;
+    font-size: 0.8em;
+  }
+  .navProfile h2 {
+    text-transform: none;
+    text-align: left;
+    padding-left: 0em;
+    margin-left: 0em;
+    padding-bottom: 0em;
+  }
+  .navProfile a {
+    text-align: left;
+    margin-left: 1em;
+  }
+
+
+  .navMain {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* top: 25px;
+    left: 25px; */
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .navMain input
+  {
+    display: flex;
+    /* width: 40px;
+    height: 32px; */
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .navMain span:nth-child(1), .navMain span:nth-child(2), .navMain span:nth-child(3)
+  {
+    display: flex;
+    /* width: 29px;
+    height: 2px; */
+    /* margin-bottom: 5px; */
+    position: relative;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  .navMain span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  .navMain span:nth-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  .navMain input:checked ~ span:nth-child(2), .navMain input:checked ~ span:nth-child(3)
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #36383F;
+  }
+  .navMain input:checked ~ span:nth-child(1)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .navMain input:checked ~ span:nth-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .mobileOpen
+  {
+    position: absolute;
+    /* width: 180px;
+    height: 400px; */
+    /* box-shadow: 0 0 10px #85888C; */
+    /* margin: -50px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px; */
+    background-color: #f1efed;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  .mobileOpen li
+  {
+    /* padding: 10px 0; */
+    transition-delay: 2s;
+  }
+  .navMain input:checked ~ .mobileOpen
+  {
+    transform: none;
+  }
+
+
 }

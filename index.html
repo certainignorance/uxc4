@@ -33,68 +33,8 @@
     }
   </script>
 
-  <script src="https://kit.fontawesome.com/98631fb0ca.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap" rel="stylesheet" />
-
-  <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" />
+  <script src="scripts/js/main.js"></script>
   <link href="styles/css/styles.css" rel="stylesheet" />
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript">
-      var tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/player_api';
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var tv,
-      playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, loop: 1, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
-    var vid = [
-        {'videoId': 'hTUmYn8_mAE', 'startSeconds': 0, 'suggestedQuality': 'large'}
-      ],
-      randomVid = Math.floor(Math.random() * vid.length),
-      currVid = randomVid;
-
-      function onYouTubePlayerAPIReady(){
-        tv = new YT.Player('back1', {events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange}, playerVars: playerDefaults});
-      }
-
-      function onPlayerReady(){
-        tv.loadVideoById(vid[currVid]);
-        tv.mute();
-      }
-
-      function onPlayerStateChange(e) {
-        if (e.data === 1){
-          $('#back1').addClass('active');
-        } else if (e.data === 2){
-          $('#back1').removeClass('active');
-            if(currVid === vid.length - 1){
-              currVid = 0;
-            } else {
-              currVid++;
-            }
-          tv.loadVideoById(vid[currVid]);
-          tv.seekTo(vid[currVid].startSeconds);
-        }
-      }
-
-      function vidRescale(){
-
-      var w = $(window).width()+200,
-        h = $(window).height()+200;
-
-        if (w/h > 16/9){
-          tv.setSize(w, w/16*9);
-          $('.screen').css({'left': '0px'});
-        } else {
-          tv.setSize(h/9*16, h);
-          $('.screen').css({'left': -($('.screen').outerWidth()-w)/2});
-        }
-      }
-
-    $(window).on('load resize', function(){
-    vidRescale();
-    });
-  </script>
 </head>
 <body>
   <div class="backGround">
@@ -106,20 +46,35 @@
       <a href="#" class="currentSection"><h1>Jeremy Platt</h1></a>
     </div>
     <nav class="navMain">
+        <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+      <div class="mobileOpen">
+        <div class="navProfile">
+          <a href="#" class="circleback"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a href="#"><h2>Jeremy Platt</h2>
+            <br /><small>ux/product design</small></a>
+        </div>
         <menu class="navMenu">
-          <li><a href="#"><h2>Process</h2></a></li>
-          <li><a href="#"><h2>Portfolio</h2></a></li>
-          <li><a href="#"><h2>Blog</h2></a></li>
-          <li><a href="#"><h2>About</h2></a></li>
-          <li class="menuContact"><a href="#"><i class="far fa-envelope" aria-hidden="true"></i><h2>Contact</h2></a></li>
+          <li class="menuMain"><a href="#"><i class="fas fa-home" aria-hidden="true"></i><h2>Main</h2></a></li>
+          <li><a href="#"><i class="fas fa-drafting-compass" aria-hidden="true"></i><h2>Process</h2></a></li>
+          <li><a href="#"><i class="fas fa-image" aria-hidden="true"></i><h2>Portfolio</h2></a></li>
+          <li><a href="#"><i class="fas fa-bell" aria-hidden="true"></i><h2>Blog</h2></a></li>
+          <li><a href="#"><i class="fas fa-user" aria-hidden="true"></i><h2>About</h2></a></li>
+          <li class="menuContact"><a href="#"><i class="fas fa-envelope" aria-hidden="true"></i><h2>Contact</h2></a></li>
           <li class="menuLock"><a href="#"><h2><i class="fas fa-lock" aria-hidden="true"></i><span class="hideText">Open Password Locked Content</span></h2></a></li>
         </menu>
+      </div>
     </nav>
+    <div class="mobileMail">
+      <a href="#"><i class="fas fa-envelope" aria-hidden="true"></i><h2>Contact</h2></a>
+    </div>
   </header>
   <main>
     <section class="heroSection">
       <h1 class="hideText">Jeremy Platt's UX Product Design Portfolio</h1>
-      <h2 class="hideText">
+      <h2>
         Website description
       </h2>
     </section>
