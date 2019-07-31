@@ -12,12 +12,23 @@ CUNY TechWorks UX Design Program - HTML, CSS & JavaScript Assignments & Resource
   - HTML Semantic Layout
   - CSS Responsive Design
   - Javascript Interaction Functions
+  - Accessibility Review
   - Wordpress Template Development
   - Wordpress Administrative Development
 - Inspiration
 - Resources
 - [Author](https://github.com/certainignorance/uxc4/blob/master/README.md#author)
 - [Acknowledgements](https://github.com/certainignorance/uxc4/blob/master/README.md#acknowledgements)
+
+## Practice Examples
+
+## Portfolio
+
+### Layout Design
+
+## Inspiration
+
+## Resources
 
 ## Author
 - **Jeremy Platt**
