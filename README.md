@@ -6,15 +6,15 @@ CUNY TechWorks UX Design Program - HTML, CSS & JavaScript Assignments & Resource
 - [Practice Examples](https://github.com/certainignorance/uxc4/blob/master/README.md#practice-examples)
 - [Portfolio](https://github.com/certainignorance/uxc4/blob/master/README.md#portfolio)
   - [Layout Design](https://github.com/certainignorance/uxc4/blob/master/README.md#layout-design)
-  - Design System
-    - Color
-    - Typeography
-  - HTML Semantic Layout
-  - CSS Responsive Design
-  - Javascript Interaction Functions
-  - Accessibility Review
-  - Wordpress Template Development
-  - Wordpress Administrative Development
+  - [Design System](https://github.com/certainignorance/uxc4/blob/master/README.md#design-system)
+    - [Color](https://github.com/certainignorance/uxc4/blob/master/README.md#color)
+    - [Typeography](https://github.com/certainignorance/uxc4/blob/master/README.md#typeography)
+  - [HTML Semantic Layout](https://github.com/certainignorance/uxc4/blob/master/README.md#html-semantic-layout)
+  - [CSS Responsive Design](https://github.com/certainignorance/uxc4/blob/master/README.md#css-responsive-design)
+  - [Javascript Interaction Functions](https://github.com/certainignorance/uxc4/blob/master/README.md#javascript-interaction-functions)
+  - [Accessibility Review](https://github.com/certainignorance/uxc4/blob/master/README.md#accessibility-review)
+  - [Wordpress Template Development](https://github.com/certainignorance/uxc4/blob/master/README.md#wordpress-template-development)
+  - [Wordpress Administrative Development](https://github.com/certainignorance/uxc4/blob/master/README.md#wordpress-administrative-development)
 - [Inspiration](https://github.com/certainignorance/uxc4/blob/master/README.md#inspiration)
 - [Resources](https://github.com/certainignorance/uxc4/blob/master/README.md#resources)
 - [Author](https://github.com/certainignorance/uxc4/blob/master/README.md#author)
@@ -25,6 +25,22 @@ CUNY TechWorks UX Design Program - HTML, CSS & JavaScript Assignments & Resource
 ## Portfolio
 
 ### Layout Design
+
+#### Color
+
+#### Typeography
+
+### HTML Semantic Layout
+
+### CSS Responsive Design
+
+### Javascript Interaction Functions
+
+### Accessibility Review
+
+### Wordpress Template Development
+
+### Wordpress Administrative Development
 
 ## Inspiration
 
