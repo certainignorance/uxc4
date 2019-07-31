@@ -260,10 +260,21 @@ main {
 }
 .caseStudies {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1em;
 }
 .caseStudies h2 {
   margin-left: 1em;
   text-align: left;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+.caseStudies .mediaIcons {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
 }
 
 .imgSection .visualContent {
@@ -287,17 +298,9 @@ main {
 }
 
 .caseStudy {
-  display: inline-block;
-  width: 30%;
+  display: block;
+  grid-row: 2 / 1 span;
   text-align: left;
-}
-.caseStudies .caseStudy:first-of-type{
-  float:left;
-  margin-left: 2em;
-}
-.caseStudies .caseStudy:last-of-type{
-  float:right;
-  margin-right: 2em;
 }
 .caseStudy h3 {
   display: inline;
