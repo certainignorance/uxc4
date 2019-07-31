@@ -16,8 +16,8 @@ CUNY TechWorks HTML, CSS & JavaScript Assignments & Resources
   - Wordpress Administrative Development
 - Inspiration
 - Resources
-- [Author](https://github.com/certainignorance/uxc4/new/master#author)
-- [Acknowledgements](https://github.com/certainignorance/uxc4/new/master#acknowledgements)
+- [Author](https://github.com/certainignorance/uxc4/blob/master/README.md#author)
+- [Acknowledgements](https://github.com/certainignorance/uxc4/blob/master/README.md#acknowledgements)
 
 ## Author
 - **Jeremy Platt**
