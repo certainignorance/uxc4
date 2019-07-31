@@ -1,6 +1,6 @@
 # UXC4 Projects Folder
 
-CUNY TechWorks HTML, CSS & JavaScript Assignments & Resources
+CUNY TechWorks UX Design Program - HTML, CSS & JavaScript Assignments & Resources
 
 ## INDEX
 - Practice Examples
