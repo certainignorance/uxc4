@@ -24,8 +24,8 @@ CUNY TechWorks UX Design Program - HTML, CSS & JavaScript Assignments & Resource
 
 ### Pricing Landing Page
 This is an example of a landing page we had to recreate from hand. We first created the HTML framework then the css on our own.  The intent is to update the CSS to include flexbox and grid in accordance to modern front end layout design.
-- [Pricing HTML (no CSS)](https://github.com/certainignorance/uxc4/blob/master/sample.html)
-- [Pricing HTML & CSS (no css grid or flexbox)](https://github.com/certainignorance/uxc4/blob/master/pricing_code.html)
+- [Pricing HTML (no CSS)](https://certainignorance.github.io/uxc4/sample.html)
+- [Pricing HTML & CSS (no css grid or flexbox)]https://certainignorance.github.io/uxc4/pricing_code.html)
 
 ## Portfolio
 
