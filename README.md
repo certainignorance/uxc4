@@ -23,12 +23,14 @@ CUNY TechWorks UX Design Program - HTML, CSS & JavaScript Assignments & Resource
 ## Portfolio
 
 ### Layout Design
+- [Adobe XD Portfolio Layout Design](https://xd.adobe.com/view/8f5a2d0c-35b4-4d0a-5f1c-e0ac5be56297-f96b/?fullscreen)
 
 ### Design System
+- [Adobe XD Portfolio Design System](https://xd.adobe.com/view/65521870-7e8a-4a16-5be6-ba1693af6f34-1363/)
 
 #### Color
 
-#### Typeography
+#### Typography
 
 ### HTML Semantic Layout
 
