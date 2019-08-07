@@ -37,50 +37,50 @@
   <link href="styles/css/styles.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="backGround">
+  <div role="presentation" class="backGround" aria-hidden="true">
     <div id="back1" class="screen mute">
     </div>
   </div>
-  <header class="pageHead">
-    <div id="logo">
+  <header role="heading" class="pageHead">
+    <div role="img" id="logo">
       <a href="#"><h2>Jeremy Platt</h2></a>
     </div>
-    <nav class="navMain">
-      <input type="checkbox" />
-      <div class="hamMenu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav role="navigation" class="navMain">
+      <input role="presentation" type="checkbox" aria-hidden="true" />
+      <div role="presentation" class="hamMenu" aria-hidden="true">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
       </div>
       <div class="mobileOpen">
         <div class="navProfile">
-          <a href="#" class="circleback"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-          <a href="#"><h2>Jeremy Platt</h2>
-            <br /><small>ux/product design</small></a>
+          <a role="link" href="#" class="circleback"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a role="menuitem" href="#"><h2>Jeremy Platt</h2>
+            <br /><small role="definition">ux/product design</small></a>
         </div>
-        <menu class="navMenu">
-          <li class="menuMain"><a href="#"><i class="fas fa-home" aria-hidden="true"></i><h2>Main</h2></a></li>
-          <li><a href="#"><i class="fas fa-drafting-compass" aria-hidden="true"></i><h3>Process</h3></a></li>
-          <li><a href="#"><i class="fas fa-image" aria-hidden="true"></i><h3>Portfolio</h3></a></li>
-          <li><a href="#"><i class="fas fa-bell" aria-hidden="true"></i><h3>Blog</h3></a></li>
-          <li><a href="#"><i class="fas fa-user" aria-hidden="true"></i><h3>About</h3></a></li>
-          <li class="menuContact"><a href="#"><i class="fas fa-envelope" aria-hidden="true"></i><h3>Contact</h3></a></li>
-          <li class="menuLock"><a href="#"><h3><i class="fas fa-lock" aria-hidden="true"></i><span class="hideText">Open Password Locked Content</span></h3></a></li>
+        <menu role="menu" class="navMenu">
+          <li role="menuitem" class="menuMain"><a href="#"><i class="fas fa-home" aria-hidden="true"></i><h2>Main</h2></a></li>
+          <li role="menuitem"><a href="#"><i class="fas fa-drafting-compass" aria-hidden="true"></i><h3>Process</h3></a></li>
+          <li role="menuitem"><a href="#"><i class="fas fa-image" aria-hidden="true"></i><h3>Portfolio</h3></a></li>
+          <li role="menuitem"><a href="#"><i class="fas fa-bell" aria-hidden="true"></i><h3>Blog</h3></a></li>
+          <li role="menuitem"><a href="#"><i class="fas fa-user" aria-hidden="true"></i><h3>About</h3></a></li>
+          <li role="menuitem" class="menuContact"><a href="#"><i class="fas fa-envelope" aria-hidden="true"></i><h3>Contact</h3></a></li>
+          <li role="menuitem" class="menuLock"><a href="#"><h3><i class="fas fa-lock" aria-hidden="true"></i><span class="hideText">Open Password Locked Content</span></h3></a></li>
         </menu>
       </div>
     </nav>
-    <div class="mobileMail">
+    <div role="presentation" class="mobileMail">
       <a href="#"><i class="fas fa-envelope" aria-hidden="true"></i><h2>Contact</h2></a>
     </div>
   </header>
-  <main>
-    <section class="heroSection">
+  <main role="main">
+    <section role="banner" class="heroSection">
       <h1 class="hideText">Jeremy Platt's UX Product Design Portfolio</h1>
       <h2>
         Website description
       </h2>
     </section>
-    <section class="caseStudies afterHero">
+    <section role="region" class="caseStudies afterHero">
       <nav class="mediaIcons">
         <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i><span class="hideText">Dribble</span></a>
         <a href="#"><i class="fab fa-behance-square" aria-hidden="true"></i><span class="hideText">Behance</span></a>
@@ -88,43 +88,56 @@
         <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="hideText">LinkedIn</span></a>
       </nav>
       <h2>Case Studies</h2>
-      <article class="caseStudy clear">
-        <section class="visualContent">
-          <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
-        </section>
-        <section class="textContent">
-        <h3>Doula Nation</h3>
-          <i class="fas fa-project-diagram" aria-hidden="true"></i><span class="hideText">Information Architect</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#" class="linkButton">More</a>
-        </section>
-      </article>
-      <article class="caseStudy">
-        <section class="visualContent">
-          <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
-        </section>
-        <section class="textContent">
-          <h3>Make A Scene</h3>
-          <i class="fas fa-user-cog" aria-hidden="true"></i><span class="hideText">UX Design Lead</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#" class="linkButton">More</a>
-        </section>
-      </article>
-      <article class="caseStudy">
-        <section class="visualContent">
-          <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
-        </section>
-        <section class="textContent">
-          <h3>Flexible Workplace</h3>
-          <i class="fas fa-pencil-ruler" aria-hidden="true"></i><span class="hideText">UX Designer</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#" class="linkButton">More</a>
-        </section>
-      </article>
+      <div class="carousel">
+        <article role="complementary" class="caseStudy">
+          <section role="presentation" class="visualContent">
+            <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
+          </section>
+          <section class="textContent">
+          <h3>Doula Nation</h3>
+            <i class="fas fa-project-diagram" aria-hidden="true"></i><span class="hideText">Information Architect</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" role="link" class="linkButton">More</a>
+          </section>
+        </article>
+        <article role="complementary" class="caseStudy">
+          <section role="presentation" class="visualContent">
+            <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
+          </section>
+          <section class="textContent">
+            <h3>Make A Scene</h3>
+            <i class="fas fa-user-cog" aria-hidden="true"></i><span class="hideText">UX Design Lead</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" role="link" class="linkButton">More</a>
+          </section>
+        </article>
+        <article role="complementary" class="caseStudy">
+          <section role="presentation" class="visualContent">
+            <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
+          </section>
+          <section class="textContent">
+            <h3>Flexible Workplace</h3>
+            <i class="fas fa-pencil-ruler" aria-hidden="true"></i><span class="hideText">UX Designer</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" role="link" class="linkButton">More</a>
+          </section>
+        </article>
+        <article role="complementary" class="caseStudy">
+          <section role="presentation" class="visualContent">
+            <a href="#"><img src="https://picsum.photos/480/200" width="100%" alt="Random Image" /></a>
+          </section>
+          <section class="textContent">
+            <h3>Flexible Workplace</h3>
+            <i class="fas fa-pencil-ruler" aria-hidden="true"></i><span class="hideText">UX Designer</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" role="link" class="linkButton">More</a>
+          </section>
+        </article>
+      </div>
     </section>
-    <section class="imgSection">
-      <article>
-        <section class="visualContent">
+    <section role="region" class="imgSection">
+      <article role="complementary">
+        <section role="presentation" class="visualContent">
           <img src="https://picsum.photos/1920/1080" alt="Random Big Image" />
         </section>
         <section class="textContent">
@@ -139,13 +152,13 @@
     </article>
     </section>
   </main>
-  <footer class="pageFoot">
+  <footer role="contentinfo" class="pageFoot">
     <p>Jeremy Platt &copy; 2019</p>
-    <nav class="mediaIcons">
-      <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i><span class="hideText">Dribble</span></a>
-      <a href="#"><i class="fab fa-behance-square" aria-hidden="true"></i><span class="hideText">Behance</span></a>
-      <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i><span class="hideText">Instagram</span></a>
-      <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="hideText">LinkedIn</span></a>
+    <nav role="menu" class="mediaIcons">
+      <a role="menuitem" href="#"><i class="fab fa-dribbble" aria-hidden="true"></i><span class="hideText">Dribble</span></a>
+      <a role="menuitem" href="#"><i class="fab fa-behance-square" aria-hidden="true"></i><span class="hideText">Behance</span></a>
+      <a role="menuitem" href="#"><i class="fab fa-instagram" aria-hidden="true"></i><span class="hideText">Instagram</span></a>
+      <a role="menuitem" href="#"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="hideText">LinkedIn</span></a>
     </nav>
   </footer>
 </body>

@@ -1,3 +1,5 @@
+console.log('external js');
+
 // background video varibiles
   var tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/player_api';
@@ -22,10 +24,11 @@
   }
 
   function onPlayerStateChange(e) {
+    var element = document.getElementById("back1");
     if (e.data === 1){
-      $('#back1').addClass('active');
+      element.classList.add("active");
     } else if (e.data === 2){
-      $('#back1').removeClass('active');
+        element.classList.remove("active");
         if(currVid === vid.length - 1){
           currVid = 0;
         } else {
@@ -37,8 +40,8 @@
   }
 
   function vidRescale(){
-    var w = $(window).width()+200,
-      h = $(window).height()+200;
+    var w = window.innerWidth+200,
+      h = window.innerHeight+200;
 
     if (w/h > 16/9){
       tv.setSize(w, w/16*9);
@@ -71,10 +74,8 @@ function include(filename, onload) {
 
 // Load Font Awesome Icons, Jquery and YouTube Video Player
 include('https://kit.fontawesome.com/98631fb0ca.js',function() {});
-include('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', function() {
-    $(document).ready(function() {
-      $(window).on('load resize', function(){
+      window.addEventListener('load', function(){
         vidRescale();
       });
-    });
-});
+      document.getElementsByTagName("BODY")[0].onresize = function() {
+        vidRescale()};

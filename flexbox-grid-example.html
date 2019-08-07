@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8;ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Flexbox, Grid and A11y</title>
+  <link rel="stylesheet" href="styles/css/styles-flexgrid.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" role="banner">
+      <div class="logo" role="img"><img src="assets/img/uxlogo.png" alt="UXC4 Logo"></div>
+      <nav role="nav">
+        <menu>
+          <li>Menu Item 1</li>
+        </menu>
+      </nav>
+    </header>
+    <main class="main" role="main">
+      <div id="main" class="content">
+        <table role="grid">
+          <tr>
+            <td>Table Cell 1</td>
+            <td>Table Cell 2</td>
+            <td>Table Cell 3</td>
+          </tr>
+        </table>
+        <div class="flexbox">
+          <div class="flex-item">Flex Cell 1</div>
+          <div class="flex-item">Flex Cell 2</div>
+          <div class="flex-item"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi animi saepe porro expedita delectus, doloribus nobis iste at nam magni eligendi id blanditiis recusandae quo facilis eius molestiae debitis minus?</p></div>
+        </div>
+        <div class="grid" role="grid">
+          <div class="grid-item" role="gridcell">Grid Cell 1</div>
+          <div class="grid-item" role="gridcell">Grid Cell 2</div>
+          <div class="grid-item" role="gridcell">Grid Cell 3</div>
+          <div class="grid-item" role="gridcell">Grid Cell 4</div>
+          <div class="grid-item" role="gridcell">Grid Cell 5</div>
+          <div class="grid-item" role="gridcell">Grid Cell 6</div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" role="contentinfo">Footer Text</footer>
+  </div>
+</body>
+</html>
