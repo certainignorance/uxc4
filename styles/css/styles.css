@@ -8,7 +8,7 @@ html, body {
   height: 100%;
   margin: 0em;
   padding: 0em;
-  font-family: 'Raleway', helvetica, arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-display: swap;
   font-weight: 400;
   font-size: calc(12px + 0.5vw);
@@ -26,6 +26,7 @@ h1 {
 h2 {
   font-size: 1.5em;
   font-weight: 400;
+  margin-top: 1.67em;
 }
 h3 {
   font-size: 1.17em;
@@ -119,7 +120,9 @@ a:hover .fab, a:hover .fas, a:hover .far {
 /* header elements */
 .pageHead {
   position: fixed;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   padding-top: 0em;
   margin-top: 0em;
@@ -138,10 +141,12 @@ a:hover .fab, a:hover .fas, a:hover .far {
 }
 .pageHead #logo {
   display: inline;
-  float: left;
+  flex-grow: 0;
+  /* float: left; */
 }
 .pageHead nav {
-  float:right;
+  /* float:right; */
+  flex-grow: 1;
   text-align: right;
   height: 100%;
 }
@@ -262,22 +267,22 @@ main {
 }
 
 .caseStudies {
-  text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 1em;
 }
 .caseStudies h2 {
   margin-left: 1em;
   text-align: left;
-  grid-column: 1 / span 2;
+  grid-column: 1;
   grid-row: 1;
 }
 .caseStudies .mediaIcons {
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 1;
   justify-self: end;
+  text-align: right;
 }
 
 .imgSection .visualContent {
@@ -298,23 +303,26 @@ main {
   padding-right: 1em;
   padding-top: 2em;
   width:50%;
+  margin-bottom: 1.67em;
 }
 
 .carousel {
   grid-row: 2;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   padding-left: 1em;
-
+  padding-right: 1em;
   display:grid;
   grid-auto-flow:column;
   grid-gap:1em;
   overflow-x:auto;
+  margin-bottom: 1.67em;
+  margin-right: 1em;
 }
 
 .caseStudy {
   display: block;
   text-align: left;
-  width: calc(33.33vw - 0.5em);
+  width: calc(33.33vw - 1.5em);
 }
 /* .caseStudy::before {
   content: "<";
@@ -387,7 +395,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: #f1efed;
-  background-image: url('http://img.youtube.com/vi/hTUmYn8_mAE/maxresdefault.jpg');
+  background-image: url('http://img.youtube.com/vi/DEj0PNdp9c0/maxresdefault.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -395,7 +403,7 @@ main {
   filter: alpha(opacity=50);
   overflow: hidden;
 }
-  .screen {
+.screen {
     position: absolute;
     top: 0;
     right: 0;
@@ -407,10 +415,10 @@ main {
 
     opacity: 0;
     transition: opacity .5s;
-}
-    .active {
-      opacity: 1;
-    }
+  }
+.active {
+    opacity: 1;
+  }
 
 
 @media only screen and (orientation: portrait) {
@@ -437,12 +445,15 @@ main {
   }
   .pageHead #logo {
     float: none;
+    order: 1;
+    flex-grow: 1;
+    margin-right: -2em;
   }
   .pageHead #logo a{
     background: none;
   }
   .pageHead .mobileMail{
-    float: right;
+    order: 2;
     padding-top: 0.25em;
     padding-right: 1em;
     font-size: 1.5em;
@@ -478,24 +489,39 @@ main {
     position:fixed;
     height: 100vh;
     width: auto;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     float: none;
     text-align: left;
     background-color: #f1efed;
   }
-  .navMenu {
-    width: 100%;
-  }
   .navMain {
     display: flex;
     flex-direction: column;
-    position: relative;
+    order: 0;
+    flex-grow: 0;
+    /* position: relative; */
     /* top: 25px;
     left: 25px; */
     z-index: 101;
     -webkit-user-select: none;
     user-select: none;
+  }
+
+  .navMenu {
+    width: 100%;
+  }
+
+  .navMain input, .navMain .hamMenu {
+    position:absolute;
+    display: block;
+    top: 0.7em;
+    left: 1em;
+    z-index: 101;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: calc(50vw - 3em) 0%;
+    transform: translate(0, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
   .navMain input
   {
@@ -508,17 +534,6 @@ main {
     cursor: pointer;
     opacity: 0;
     z-index: 102;
-  }
-  .navMain input, .navMain .hamMenu {
-    position:absolute;
-    display: block;
-    top: 0.7em;
-    left: 1em;
-    z-index: 101;
-    -webkit-font-smoothing: antialiased;
-    transform-origin: calc(50vw - 3em) 0%;
-    transform: translate(0, 0);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
   .hamMenu span:nth-child(1), .hamMenu span:nth-child(2), .hamMenu span:nth-child(3)
@@ -591,6 +606,9 @@ main {
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
+  .caseStudy {
+    width: calc(100vw - 2em);
+  }
   .imgSection {
     background-color: #D79F8B;
   }
@@ -630,20 +648,23 @@ main {
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
       }
   .imgSection .visualContent:after {
-    position: absolute;
-    display: block;
-    z-index: 105;
-    left:0;
-    top: 75%;
-    height: 25%;
-    content: ' ';
-    width: 100%;
-    opacity: 0.8;
-    background-color: #D79F8B;
-    -webkit-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
-    -moz-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
-  }
+        position: absolute;
+        display: block;
+        z-index: 105;
+        left:0;
+        top: 75%;
+        height: 25%;
+        content: ' ';
+        width: 100%;
+        /* opacity: 0.8; */
+        /* background-color: #D79F8B; */
+        background-image: -webkit-linear-gradient(rgba(215,159,139,0.8) 0%, rgba(215,159,139,1) 70%);
+        background-image: -o-linear-gradient(rgba(215,159,139,0.8) 0%, rgba(215,159,139,1) 70%);
+        background-image: linear-gradient(rgba(215,159,139,0.8) 0%, rgba(215,159,139,1) 70%);
+        -webkit-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
+        -moz-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
+      }
 
   .imgSection .textContent {
     padding-top: calc( 40vh + 2em);
@@ -662,7 +683,7 @@ main {
   .pageFoot p {
     margin-right: 2em;
   }
-  .pageFoot .mediaIcons{
+  .mediaIcons{
     float: none;
     letter-spacing: 0.1em;
   }
