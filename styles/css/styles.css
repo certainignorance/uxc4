@@ -65,8 +65,8 @@ a:hover {
 .linkButton, .formInfo input[type=submit] {
   display: inline-block;
   border-radius: 20px;
-  background-image: -webkit-linear-gradient(66deg, #c97d60, #b00020);
-  background-image: -o-linear-gradient(66deg, #c97d60, #b00020);
+  background-image: -webkit-linear-gradient(156deg, #c97d60, #b00020);
+  background-image: -o-linear-gradient(156deg, #c97d60, #b00020);
   background-image: linear-gradient(156deg, #c97d60, #b00020);
   color: #FFFFFF;
   text-transform: lowercase;
@@ -286,6 +286,11 @@ main {
   grid-column: 1;
   grid-row: 1;
 }
+
+.contactInfo h3 {
+  margin-left: 2em;
+}
+
 .caseStudies .mediaIcons {
   grid-column: 2;
   grid-row: 1;
@@ -404,8 +409,11 @@ main {
   padding: 0.5em 1em;
 }
 
-input[type=text]:invalid, input[type=email]:invalid, textarea:invalid {
+
+input:not(:focus):invalid::placeholder,
+textarea:not(:focus):invalid::placeholder {
   color: #B00020;
+  opacity: 1; /* Firefox */
 }
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
@@ -880,11 +888,26 @@ label {
     top: 2em;
     left: 1em;
   }
-.processSection h2 {
+  .processSection h2 {
   margin-left: 1em;
   margin-top: -0.2em;
 }
 
+  .formSection {
+    grid-auto-flow: row;
+  }
+
+  .formSection .contactInfo {
+    width: 100vw;
+    height: 100%;
+    -webkit-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 calc(100% - 6vh));
+    -moz-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 calc(100% - 6vh));
+    clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 calc(100% - 6vh));
+  }
+  .formSection .formInfo {
+    width: calc(100vw - 3em);
+    height: 100%;
+  }
 
   .pageFoot {
     text-align: right;
