@@ -62,7 +62,7 @@ a:hover {
   float:left;
 }
 
-.linkButton, input[type=submit] {
+.linkButton, .formInfo input[type=submit] {
   display: inline-block;
   border-radius: 20px;
   background-image: -webkit-linear-gradient(66deg, #c97d60, #b00020);
