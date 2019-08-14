@@ -312,7 +312,7 @@ main {
   width:50vw;
   object-fit: cover;
   overflow: hidden;
-  margin-top: -3em;
+  margin-top: 1em;
   -webkit-clip-path: polygon(0 3vh, calc(100% - 6vw) 0, 100% calc(100% - 3vh), 0 100%);
   -moz-clip-path: polygon(0 3vh, calc(100% - 6vw) 0, 100% calc(100% - 3vh), 0 100%);
   clip-path: polygon(0 3vh, calc(100% - 6vw) 0, 100% calc(100% - 3vh), 0 100%);
@@ -329,14 +329,14 @@ main {
   position: absolute;
   top: 0;
   left:50%;
-  height: calc( 100% + 4em );
+  height: calc( 100% - 1.7em );
   width:50%;
   object-fit: cover;
   overflow: hidden;
-  margin-top: -4em;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
-  -moz-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
+  margin-top: 0.2em;
+  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
+  -moz-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
+  clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
 }
 .visualContent img {
   object-fit: cover;
@@ -900,6 +900,7 @@ label {
   .formSection .contactInfo {
     width: 100vw;
     height: 100%;
+    margin-top: -2.8em;
     -webkit-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 calc(100% - 6vh));
     -moz-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 calc(100% - 6vh));
     clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 calc(100% - 6vh));
