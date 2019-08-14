@@ -85,10 +85,19 @@ console.log('external js');
 }
 
 // JAVASCRIPT CAROUSEL
+  function removeElementsByClass(className){
+    var elements = document.getElementsByClassName(className);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
+
   function updateCarousels(){
-    let caseSlides = document.querySelectorAll(".caseStudies");
+    removeElementsByClass("carouselControls");
+    let w = window.innerWidth,
+        h = window.innerHeight;
+    let caseSlides = document.querySelectorAll(".container");
   	for (let caseSlider of caseSlides) {
-  	  console.log('caseStudies: ', caseSlider);
       let caseSlide = caseSlider.getElementsByTagName("article");
       for (let j = 0; j < caseSlide.length; j++) {
         let my_elem = caseSlide[j];
@@ -97,18 +106,85 @@ console.log('external js');
               div.innerHTML = '';
               div.className = 'carousel';
           my_elem.parentNode.insertBefore(div, my_elem);
-          let cControls = document.createElement('div');
-            cControls.innerHTML = ' <span>*</span> * *';
-            cControls.className = 'carouselControls';
-          // insert After
-          div.parentNode.insertBefore(cControls, div.nextSibling);
+          caseSlider.classList.add("containCarousel");
+          if (w > h && caseSlide.length > 3 && !caseSlider.parentNode.classList.contains('processSection')){
+            var cControls = document.createElement('div');
+              cControls.innerHTML = ' <span class="clickedSlide"></span>';
+              cControls.className = 'carouselControls';
+            // insert After
+            caseSlider.parentNode.insertBefore(cControls, caseSlider.nextSibling);
+          } else if (h > w && caseSlide.length > 1 || caseSlider.parentNode.classList.contains('processSection') && caseSlide.length > 1) {
+            var cControls = document.createElement('div');
+              cControls.innerHTML = ' <span class="clickedSlide"></span>';
+              cControls.className = 'carouselControls';
+            // insert After
+            caseSlider.parentNode.insertBefore(cControls, caseSlider.nextSibling);
+          }
+        }else{
+          if (w > h && caseSlide.length > 3 && (j+1) % 3 === 0 && !caseSlider.parentNode.classList.contains('processSection') ){
+            cControls.innerHTML += ' <span></span>';
+          } else if (h > w && caseSlide.length > 1 || caseSlider.parentNode.classList.contains('processSection') && caseSlide.length > 1) {
+            cControls.innerHTML += ' <span></span>';
+          }
         }
         div.appendChild(my_elem);
         console.log('caseStudy: ', caseSlide[j]);
       }
-
   	}
+    let caseControls = document.querySelectorAll(".carouselControls span");
+  	for (let j = 0; j < caseControls.length; j++) {
+        //Defines the span
+        let spanControl = caseControls[j];
+
+        //Checks if 'addEventListener' can be used and adds the click eventlListener
+        if (spanControl.addEventListener) spanControl.addEventListener('click', carouselShift, false);
+        else spanControl.attachEvent('onclick', carouselShift);
+
+        //Creates a click event
+        var spanClick = new Event('click');
+        //dispatches the click event for the span
+        // spanControl.dispatchEvent(spanClick);
+    }
   }
+
+  //Defines the function to be called on click
+  var cmove = 0;
+  var cstring;
+  function carouselShift() {
+    let w = window.innerWidth,
+        h = window.innerHeight;
+    for (let j = 0; j < this.parentNode.childElementCount; j++) {
+      if (this.parentNode.children[j].classList.contains("clickedSlide")){
+        this.parentNode.children[j].classList.remove("clickedSlide");
+      }
+    }
+    this.classList.add("clickedSlide");
+    for (let j = 0; j < this.parentNode.childElementCount; j++) {
+
+      if (this.parentNode.children[j].classList.contains("clickedSlide")){
+        if (j > 0){
+          cmove = j * (-1);
+        }else{
+          cmove = 0;
+        }
+      }
+      if (cmove < 0){
+        if (w>h && !this.parentNode.parentNode.classList.contains('processSection')){
+          cstring = 'calc(' + cmove*100 + '% + ' + 1.5*cmove + 'em)';
+        }else if (h>w && !this.parentNode.parentNode.classList.contains('processSection')){
+          cstring = 'calc(' + cmove*100 + '% + ' + 2*cmove + 'em)';
+        }else{
+          cstring = 'calc(' + cmove*100 + '% + ' + 3*cmove + 'em)';
+        }
+      }else{
+        cstring = '0%';
+      }
+      console.log(cmove);
+    }
+    this.parentNode.previousSibling.getElementsByClassName("carousel")[0].style.transform = "translateX("+ cstring +")";
+    console.log(this.parentNode.previousSibling.getElementsByClassName("carousel")[0]);
+  }
+
 
 
 // LOAD FONT AWESOME ICONS AND YOUTUBE VIDEO PLAYER
@@ -116,4 +192,4 @@ console.log('external js');
 
 // event listeners
   window.addEventListener('load', function(){ vidRescale(); updateCarousels(); });
-  window.addEventListener("resize", function() {vidRescale()});
+  window.addEventListener("resize", function() {vidRescale();});
