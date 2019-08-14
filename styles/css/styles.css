@@ -800,13 +800,17 @@ label {
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
+  .processSection .carouselControls {
+    margin-left: -50%;
+  }
+
   .caseStudy {
     width: calc(100vw - 2em);
   }
-  .imgSection {
+  .imgSection, .processSection {
     background-color: #D79F8B;
   }
-  .imgSection:after {
+  .imgSection:after, .processSection:after {
     top: 8em;
     height: calc(100% - 8.2em);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
@@ -816,7 +820,13 @@ label {
     z-index: -2;
   }
 
-  .imgSection .visualContent {
+  .imgSection .visualContent, .processSection .visualContent {
+    position: absolute;
+    top: 0;
+    left:50%;
+    object-fit: cover;
+    overflow: hidden;
+    margin-top: -4em;
     left:0;
     top: 8em;
     height: 40vh;
@@ -825,7 +835,7 @@ label {
     -moz-clip-path: polygon(0 2em, 100% 2em, 100% 100%, 0 calc(100% - 6vh));
     clip-path: polygon(0 2em, 100% 2em, 100% 100%, 0 calc(100% - 6vh));
   }
-  .imgSection .visualContent:before {
+  .imgSection .visualContent:before, .processSection .visualContent:before {
         position: absolute;
         display: block;
         z-index: 105;
@@ -841,7 +851,7 @@ label {
         -moz-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
       }
-  .imgSection .visualContent:after {
+  .imgSection .visualContent:after, .processSection .visualContent:after {
         position: absolute;
         display: block;
         z-index: 105;
@@ -860,16 +870,21 @@ label {
         clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
       }
 
-  .imgSection .textContent {
+  .imgSection .textContent, .processSection .textContent {
     padding-top: calc( 40vh + 2em);
     padding-left: 2em;
     width: calc(100% - 3em);
   }
-  .imgSection .textContent h2 {
+  .imgSection .textContent h2, .processSection .textContent h2 {
     position:absolute;
     top: 2em;
     left: 1em;
   }
+.processSection h2 {
+  margin-left: 1em;
+  margin-top: -0.2em;
+}
+
 
   .pageFoot {
     text-align: right;
