@@ -308,14 +308,14 @@ main {
   padding-left: 4.5em;
 }
 .processSection .visualContent {
-  height: calc( 100% + 3em );
   width:50vw;
   object-fit: cover;
   overflow: hidden;
   margin-top: 1em;
-  -webkit-clip-path: polygon(0 3vh, calc(100% - 6vw) 0, 100% calc(100% - 3vh), 0 100%);
-  -moz-clip-path: polygon(0 3vh, calc(100% - 6vw) 0, 100% calc(100% - 3vh), 0 100%);
-  clip-path: polygon(0 3vh, calc(100% - 6vw) 0, 100% calc(100% - 3vh), 0 100%);
+  height: calc(100% - 1em);
+  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
+  -moz-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
+  clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
 }
 .processSection .textContent {
   padding-left: 1em;
@@ -329,7 +329,7 @@ main {
   position: absolute;
   top: 0;
   left:50%;
-  height: calc( 100% - 1.7em );
+  height: calc( 100% - 4em );
   width:50%;
   object-fit: cover;
   overflow: hidden;
@@ -439,7 +439,7 @@ label {
 }
 .processSection .container {
   width: calc(100vw - 2em);
-  padding-right: 1em;
+  padding-right: 2em;
   overflow-x: auto;
   display:grid;
   grid-auto-flow:column;
@@ -447,6 +447,7 @@ label {
 }
 
 .processSection .container article {
+  position: relative;
   display:grid;
   grid-auto-flow:column;
   text-align: left;
