@@ -168,7 +168,8 @@ li.menuMain {
   display: none;
 }
 
-.pageHead a:hover h2, .pageHead a:hover h3 {
+.pageHead a:hover h2, .pageHead a:hover h3,
+.pageHead .currentPage h2, .pageHead .currentPage h3 {
   background-image: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #B00020;
@@ -189,7 +190,7 @@ li.menuMain {
   height: 100%;
   display: inline-block;
 }
-.pageHead a:hover {
+.pageHead a:hover, .pageHead .currentPage {
   background: #f1efed; /* Old browsers */
   background: -moz-linear-gradient(top, #f1efed 0%, #ddd5d0 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #f1efed 0%,#ddd5d0 100%); /* Chrome10-25,Safari5.1-6 */
@@ -299,13 +300,14 @@ main {
 }
 
 .processSection h2{
-  margin-left: 50%;
+  margin-left: calc(50% + 0.5em);
   margin-top: 0em;
   margin-bottom: -4em;
 }
 .processSection h2 span{
   display: block;
   padding-left: 4.5em;
+  font-weight: bolder;
 }
 .processSection .visualContent {
   width:50vw;
@@ -329,14 +331,14 @@ main {
   position: absolute;
   top: 0;
   left:50%;
-  height: calc( 100% - 4em );
+  height: calc( 100% - 1.6em );
   width:50%;
   object-fit: cover;
   overflow: hidden;
   margin-top: 0.2em;
-  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
-  -moz-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
-  clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 6vw 100%);
+  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 3vw 100%);
+  -moz-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 3vw 100%);
+  clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 3vw 100%);
 }
 .visualContent img {
   object-fit: cover;
@@ -348,7 +350,7 @@ main {
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 2em;
-  width:50%;
+  width:calc(50% - 1.5em);
   margin-bottom: 1.67em;
 }
 
@@ -582,7 +584,7 @@ label {
 .mediaIcons {
   float: right;
   position: relative;
-  padding-right: 1em;
+  padding-right: 0.5em;
   font-size: 2em;
 }
 
@@ -652,13 +654,13 @@ label {
     flex-grow: 1;
     margin-right: -2em;
   }
-  .pageHead #logo a{
+  .pageHead #logo a, .pageHead .mobileMail a{
     background: none;
   }
   .pageHead .mobileMail{
     order: 2;
     padding-top: 0.25em;
-    padding-right: 1em;
+    padding-right: 0.75em;
     font-size: 1.5em;
   }
   .pageHead .mobileMail h2{
@@ -811,6 +813,7 @@ label {
 
   .processSection .carouselControls {
     margin-left: -50%;
+    width: 100%;
   }
 
   .caseStudy {
@@ -856,9 +859,9 @@ label {
         background-image: -webkit-linear-gradient(rgba(215,159,139,1) 50%, rgba(215,159,139,0.8));
         background-image: -o-linear-gradient(rgba(215,159,139,1) 50%, rgba(215,159,139,0.8));
         background-image: linear-gradient(rgba(215,159,139,1) 50%, rgba(215,159,139,0.8));
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
-        -moz-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vh), 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.8vh), 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.8vh), 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.8vh), 0 100%);
       }
   .imgSection .visualContent:after, .processSection .visualContent:after {
         position: absolute;
@@ -874,9 +877,9 @@ label {
         background-image: -webkit-linear-gradient(rgba(215,159,139,0.8) 0%, rgba(215,159,139,1) 70%);
         background-image: -o-linear-gradient(rgba(215,159,139,0.8) 0%, rgba(215,159,139,1) 70%);
         background-image: linear-gradient(rgba(215,159,139,0.8) 0%, rgba(215,159,139,1) 70%);
-        -webkit-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
-        -moz-clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
-        clip-path: polygon(0 6vh, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 3.8vh, 100% 0, 100% 100%, 0 100%);
+        -moz-clip-path: polygon(0 3.8vh, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 3.8vh, 100% 0, 100% 100%, 0 100%);
       }
 
   .imgSection .textContent, .processSection .textContent {
@@ -886,12 +889,12 @@ label {
   }
   .imgSection .textContent h2, .processSection .textContent h2 {
     position:absolute;
-    top: 2em;
+    top: 1.4em;
     left: 1em;
   }
   .processSection h2 {
   margin-left: 1em;
-  margin-top: -0.2em;
+  margin-top: 0.8em;
 }
 
   .formSection {
@@ -915,7 +918,7 @@ label {
     text-align: right;
   }
   .pageFoot p {
-    margin-right: 2em;
+    margin-right: 1em;
   }
   .mediaIcons{
     float: none;
