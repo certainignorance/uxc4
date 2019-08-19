@@ -1,7 +1,10 @@
-console.log('external js');
-
 // BACKGROUND VIDEO JAVASCRIPT
+
+  // const (can be set but not changed), var (can be set & changed), & let (temp variable to be used in loop, etc)
+  // are variations of variables
+
   const tag = document.createElement('script');
+    // with const you can add & permenantly define additions
     tag.src = 'https://www.youtube.com/player_api';
 
   var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -262,7 +265,6 @@ console.log('external js');
       this.parentNode.previousSibling.firstChild.style.display="inline";
     }
     this.setAttribute("cMove", cmove);
-    console.log(cmove);
     this.parentNode.parentNode.getElementsByClassName("containCarousel")[0].getElementsByClassName("carousel")[0].style.transform = "translateX("+ cstring +")";
   }
 

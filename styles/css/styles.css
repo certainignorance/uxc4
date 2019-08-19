@@ -251,7 +251,7 @@ main {
   clip-path: polygon(0 6vh, 100% 0, 100% calc(100% - 6vh), 0 100%);
   padding-top: 3em;
   padding-bottom: 4em;
-  margin-bottom: 25vh;
+  margin-bottom: 30vh;
 }
 .caseStudies:after, .imgSection:after, .plainSection:after, .processSection:after, .formSection:after {
   display: block;
@@ -306,8 +306,9 @@ main {
   margin-bottom: -4em;
 }
 .processSection h2 span{
-  display: block;
-  padding-left: 4.5em;
+  display: inline-block;
+  vertical-align: -50%;
+  /* padding-left: 4.5em; */
   font-weight: bolder;
 }
 .processSection .visualContent {
@@ -316,9 +317,9 @@ main {
   overflow: hidden;
   margin-top: 1em;
   height: calc(100% - 1em);
-  -webkit-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
-  -moz-clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
-  clip-path: polygon(0 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
+  -webkit-clip-path: polygon(0 3vh, calc(100% - 3vw) 0, 100% calc(100% - 3vh), 0 100%);
+  -moz-clip-path: polygon(0 3vh, calc(100% - 3vw) 0, 100% calc(100% - 3vh), 0 100%);
+  clip-path: polygon(0 3vh, calc(100% - 3vw) 0, 100% calc(100% - 3vh), 0 100%);
 }
 .processSection .textContent {
   padding-left: 1em;
