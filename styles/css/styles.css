@@ -559,7 +559,7 @@ label {
 .caseStudy h3 {
   display: inline;
 }
-.caseStudy .fas {
+.caseStudy .fas, .caseStudy .fab {
   float:right;
   display: inline-block;
 }
